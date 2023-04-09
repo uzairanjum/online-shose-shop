@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Menu from "./Menu";
 import Icons from './Icons'
+import MenuMobile from './MenuMobile'
 
 
 
@@ -23,6 +24,8 @@ export default function Header() {
           <img src="/logo.svg" className="w-[40px] md:w-[60px]" />
         </Link>
         <Menu showCatMenu ={showCatMenu} setShowCatMenu={setShowCatMenu} />
+        {mobileMenu && <MenuMobile showCatMenu ={showCatMenu} setShowCatMenu={setShowCatMenu} setMobileMenu={setMobileMenu}/>}
+
         <Icons mobileMenu ={mobileMenu} setMobileMenu={setMobileMenu} />
 
 
